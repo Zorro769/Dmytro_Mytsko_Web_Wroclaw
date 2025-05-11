@@ -1,3 +1,12 @@
+## Approach & Assumptions
+
+- **State Management** is handled using a custom `CartContext` with `useContext` and `useState`.
+- Each product has a price structure `{ main: number, fractional: number }` to mimic real-world currency formatting.
+- Quantity can be updated directly in the cart.
+- Order placement navigates to a **separate HTML page** using `window.location.href` (non-SPA full reload), as per requirements.
+- Order confirmation data is stored temporarily in `localStorage`.
+- Upon placing an order, the cart is cleared to allow for a fresh start.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
