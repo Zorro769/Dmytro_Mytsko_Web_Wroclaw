@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Zamówienie potwierdzone</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+        }
+
+        .back-link {
+            margin-top: 2rem;
+            display: inline-block;
+            text-decoration: none;
+            color: #0070f3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Order placed successfully!</h1>
+
+    <div id="summary"></div>
+
+    <a href="/" class="back-link">Back to store</a>
+
+    <script>
+        const data = JSON.parse(localStorage.getItem("orderData") || "{}");
+        const { cart = [], total = 0 } = data;
+
+        if (cart.length === 0) {
+            document.getElementById("summary").innerHTML = "<p>No items.</p>";
+        } else {
+            let html = "<table><thead><tr><th>Produkt</th><th>Amount</th><th>Price</th><th>Sum</th></tr></thead><tbody>";
+            cart.forEach(item => {
+                const { name, price } = item.product;
+                const quantity = item.quantity;
+                const unitPrice = price.main + price.fractional / 100;
+                const subtotal = (unitPrice * quantity).toFixed(2);
+                html += `<tr><td>${name}</td><td>${quantity}</td><td>${unitPrice.toFixed(2)}</td><td>${subtotal} </td></tr>`;
+            });
+            html += `</tbody></table><h3>Total: ${total.toFixed(2)} </h3>`;
+            document.getElementById("summary").innerHTML = html;
+        }
+
+        localStorage.removeItem("orderData");
+    </script>
+</body>
+
+</html>
