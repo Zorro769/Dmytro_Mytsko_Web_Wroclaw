@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Dmytro_Mytsko_Web_Wroclaw/static/css/main.c463eb29.css",
-    "main.js": "/Dmytro_Mytsko_Web_Wroclaw/static/js/main.a86c4288.js",
+    "main.js": "/Dmytro_Mytsko_Web_Wroclaw/static/js/main.397f44f1.js",
     "static/js/453.71d762d1.chunk.js": "/Dmytro_Mytsko_Web_Wroclaw/static/js/453.71d762d1.chunk.js",
     "static/media/cart-icon.png": "/Dmytro_Mytsko_Web_Wroclaw/static/media/cart-icon.0536a050c115dd91665c.png",
     "index.html": "/Dmytro_Mytsko_Web_Wroclaw/index.html",
     "main.c463eb29.css.map": "/Dmytro_Mytsko_Web_Wroclaw/static/css/main.c463eb29.css.map",
-    "main.a86c4288.js.map": "/Dmytro_Mytsko_Web_Wroclaw/static/js/main.a86c4288.js.map",
+    "main.397f44f1.js.map": "/Dmytro_Mytsko_Web_Wroclaw/static/js/main.397f44f1.js.map",
     "453.71d762d1.chunk.js.map": "/Dmytro_Mytsko_Web_Wroclaw/static/js/453.71d762d1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c463eb29.css",
-    "static/js/main.a86c4288.js"
+    "static/js/main.397f44f1.js"
   ]
 }
