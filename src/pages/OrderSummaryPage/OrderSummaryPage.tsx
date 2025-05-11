@@ -15,7 +15,7 @@ const OrderSummary = () => {
     );
 
     clearCart(); //
-    window.location.href = "/order-confirmation.html";
+    window.location.href = `${process.env.PUBLIC_URL}/order-confirmation.html`;
   };
   return (
     <div className={styles.summary}>
